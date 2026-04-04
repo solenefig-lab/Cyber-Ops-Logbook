@@ -52,9 +52,9 @@ Chaque section documente les concepts techniques, les patterns de résolution re
 
 [Dossier Bandit](./bandit/): Concepts clés et patterns de résolution (Linux & System Security).
 
-Dossier leviathan/ : Analyse de la logique de privilèges et exploitation de binaires.
+Dossier leviathan : Analyse de la logique de privilèges et exploitation de binaires.
 
-Dossier natas : Vulnérabilités web et bonnes pratiques (Top 10 OWASP).
+[Dossier Natas](./natas/): Vulnérabilités web et bonnes pratiques (Top 10 OWASP).
 
 Dossier krypton : Bases de la cryptographie appliquée à la protection des actifs.
 
