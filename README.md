@@ -1,4 +1,8 @@
-# Cyber-Ops Logbook
+# Security Ops Logbook
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-GRC%20%7C%20Linux%20Security-red)
+![Tool](https://img.shields.io/badge/Tool-Linux%20%7C%20Bash%20%7C%20OverTheWire-blue)
+![Level](https://img.shields.io/badge/Level-Intermediate-orange)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
 > **Apprentissage technique (Linux / sécurité) au service d’une démarche GRC : comprendre, vérifier et traduire les risques techniques en décisions concrètes.**
 
@@ -10,14 +14,6 @@ Développer une compréhension opérationnelle des systèmes pour :
 * **Analyser** des situations de sécurité réelles.
 * **Vérifier** l’application effective des contrôles de sécurité.
 * **Renforcer** la pertinence des recommandations en gouvernance (GRC).
-
----
-
-## Positionnement & Expertise
-
-* **Traduction des risques techniques** en enjeux métiers et business.
-* **Vérification terrain** des pratiques de sécurité (Hardening, accès, exposition).
-* **Interface opérationnelle** entre exigences réglementaires (RGPD, NIS2, ISO 27001) et réalité technique.
 
 ---
 
