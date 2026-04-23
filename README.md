@@ -55,8 +55,7 @@ par l'analyse de Kasiski et les générateurs pseudo-aléatoires faibles.*
 | **Script Python d'analyse cryptographique** | Automatisation des contrôles de sécurité — vérification de la robustesse des choix crypto lors d'un audit. |
 
 ---
-### [OverTheWire — Leviathan (Level 4/8 — En cours)](https://overthewire.org/wargames/leviathan/) | [Consulter mes notes](./leviathan/)
-
+### [OverTheWire — Leviathan (7/7 — Terminé)](https://overthewire.org/wargames/leviathan/) | [Consulter mes notes](./leviathan/)
 *Focus : Analyse de binaires, escalade de privilèges SetUID, vulnérabilités TOCTOU.*
 
 | Compétence technique | Lecture GRC / Audit |
@@ -64,6 +63,8 @@ par l'analyse de Kasiski et les générateurs pseudo-aléatoires faibles.*
 | **Reverse engineering (`strings`, `ltrace`)** | Détection de credentials hardcodés dans les exécutables (CWE-798). |
 | **Analyse `objdump`** | Compréhension de la logique d'autorisation — où le check s'arrête, où le risque commence. |
 | **Faille TOCTOU + injection d'arguments** | Failles de conception sur les binaires privilégiés — impact escalade de privilèges (CWE-367). |
+| **Symlink attack sur fichiers temporaires** | Risque d'accès non autorisé via `/tmp` — mauvaise gestion des fichiers temporaires (CWE-377). |
+| **Brute force & analyse assembleur** | Absence de protection anti-brute force + secrets extraits statiquement (CWE-261). |
 | **Binaires SetUID** | Surface d'attaque liée aux droits élevés — audit PoLP et revue des exécutables sensibles. |
 
 ---
