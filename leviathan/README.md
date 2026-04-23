@@ -89,13 +89,77 @@ objdump -d ./binaire       # analyse la logique strcmp
 
 ---
 
+## 5. Symlink attack sur fichier temporaire
+
+**Niveaux concernés : 4 → 6**
+
+- Binaire privilégié qui ouvre un fichier à chemin fixe (/tmp/file.log)
+- Création d'un lien symbolique vers une cible privilégiée
+- Le binaire suit le symlink avec ses droits effectifs (leviathan6)
+- unlink() : le fichier est supprimé après lecture, timing critique
+
+**Pointers**
+```bash
+ltrace ./binaire           # révèle fopen("/tmp/file.log")
+ln -s /cible /tmp/file.log # symlink attack
+./binaire                  # lit la cible avec droits élevés
+```
+
+**Lecture sécurité**
+- **Risque :** Symlink attack sur fichiers temporaires (CWE-61 / CWE-377).
+- **Enjeu :** Ne jamais ouvrir de fichiers dans /tmp sans O_NOFOLLOW, utiliser mkstemp(), vérifier l'ownership avant ouverture.
+
+---
+
+## 6. Brute force & code hardcodé en assembleur
+
+**Niveaux concernés : 6 → 7**
+
+- Binaire attendant un code à 4 chiffres
+- Brute force scriptée (0000-9999), limites : lenteur, déconnexion SSH si shell spawné
+- Lecture assembleur via objdump pour extraire la valeur hardcodée
+- Conversion hexadécimal → décimal
+
+**Pointers**
+```bash
+strings ./binaire              # repère atoi, /bin/sh
+objdump -d ./binaire | grep "cmp"          # localise la comparaison
+objdump -d ./binaire | grep -B 20 "cmp"   # remonte au mov hardcodé
+echo $((16#XXXX))              # conversion hex → dec
+```
+
+**Lecture sécurité**
+- **Risque :** Code hardcodé extrait par analyse statique (CWE-798), absence de protection anti-brute force.
+- **Enjeu :** NAucun secret dans le binaire, rate limiting, lockout après N tentatives.
+
+---
+
 ## Synthèse
 
+**Workflow d'analyse binaire acquis :**
+- Analyser statiquement avant d'exécuter (`strings`, `objdump`).
+```
+strings → ltrace → objdump → exécution directe
+statique → dynamique → assembleur → exploitation
+```
+  
 **Patterns clés acquis :**
 - Analyser statiquement avant d'exécuter (`strings`, `objdump`).
 - Intercepter dynamiquement pour confirmer (`ltrace`).
 - Identifier la fenêtre TOCTOU : où s'arrête le check, où commence l'exécution.
 - Tout espace ou caractère non échappé dans une commande shell est une surface d'injection.
+- Les fichiers temporaires à chemin fixe sont des cibles d'attaque symlink classiques.
+
+**Surface d'attaque couverte :**
+| CWE | Description |
+|-----|-------------|
+| CWE-798 | Hardcoded credentials |
+| CWE-312 | Cleartext storage of sensitive info |
+| CWE-367 | TOCTOU race condition |
+| CWE-78 | OS command injection |
+| CWE-61 | Symlink following |
+| CWE-377 | Insecure temporary file |
+| CWE-261 | Weak encoding for password |
 
 **Positionnement**
 
