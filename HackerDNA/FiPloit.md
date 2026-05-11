@@ -1,6 +1,6 @@
 # Write-Up : FiPloit
 
-**Plateforme :** HackerDNA  
+**Plateforme :** HackerDNA  (https://hackerdna.com/fr/labs/fiploit)
 **Catégorie :** Web Security — File Operations  
 **Difficulté :** Facile  
 **Tags :** `LFI` `File Upload Bypass` `PHP Security` `RCE` `PrivEsc`
@@ -141,6 +141,3 @@ sudo php -r 'echo file_get_contents("/root/flag-root.txt");'
 - **Validation d'entrée :** `strpos('.txt')` ≠ validation 
   d'extension. Utiliser une liste blanche stricte ou `pathinfo()`.
 
----
-
-### Note d'éthique : Aucun secret ou mot de passe n'est publié afin de préserver l'intégrité des plateformes d'apprentissage et de démontrer mes réflexes de protection des données sensibles.
