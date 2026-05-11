@@ -1,4 +1,4 @@
-# Security Ops Logbook
+# OverTheWire Wargames
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-GRC%20%7C%20Linux%20Security-red)
 ![Tool](https://img.shields.io/badge/Tool-Linux%20%7C%20Bash%20%7C%20OverTheWire-blue)
 ![Level](https://img.shields.io/badge/Level-Intermediate-orange)
@@ -92,4 +92,6 @@ Chaque section documente les concepts techniques, les patterns de résolution re
 
 [Dossier Natas](./natas/): Vulnérabilités web et bonnes pratiques (Top 10 OWASP).
 
-_**Note d'éthique** : Aucun secret ou mot de passe n'est publié afin de préserver l'intégrité des plateformes d'apprentissage et de démontrer mes réflexes de protection des données sensibles._
+
+=======
+_**Note d'éthique** : Aucun secret ou mot de passe n'est publié afin de préserver l'intégrité des plateformes d'apprentissage et de démontrer mes réflexes de protection des données sensibles.
