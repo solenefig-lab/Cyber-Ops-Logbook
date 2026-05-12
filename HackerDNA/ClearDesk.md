@@ -30,6 +30,7 @@ L'endpoint suit une structure prévisible : `/api/ticket/<ID>`. Bien que l'utili
 En automatisant l'incrémentation des IDs, plusieurs ressources confidentielles ont été exfiltrées :
 *   **Audit Findings** : Un ticket contenant les conclusions d'un audit de sécurité interne.
 🚩 **Flag User :** `FLAG{...}`
+
 *   **IT Admin Credentials** : Un ticket de support technique contenant des identifiants temporaires pour un compte administrateur.
 
 > **Réflexe audit (CWE-639) :** L'authentification ("Qui êtes-vous ?") est présente, mais l'autorisation ("Qu'avez-vous le droit de voir ?") est absente. L'utilisation d'identifiants non prévisibles (UUID) au lieu d'IDs incrémentaux est une première barrière recommandée.
@@ -51,6 +52,7 @@ Le module de logs utilise un paramètre `file` pour appeler des fichiers sur le 
 Lecture du fichier `/etc/passwd` pour confirmer la vulnérabilité et identifier les utilisateurs du système :
 ```bash
 curl "http://<IP>/admin/logs?file=../../../../etc/passwd"
+```
 
 *   **Recherche de chemin** : En exploitant un indice trouvé dans les tickets d'administration (mentionnant un échec de backup sur un fichier sensible), l'accès au flag final est réalisé via un chemin absolu.
 🚩 **Flag Root :** `FLAG{...}`
