@@ -64,8 +64,9 @@ curl "http://<IP>/admin/logs?file=../../../../etc/passwd"
 | Risque | CWE | Impact | Recommandation |
 |--------|--------|--------|----------------|
 | BOLA / IDOR | CWE-639 |	Fuite de données massives et vol d'identifiants. |	Valider les autorisations sur chaque objet demandé côté serveur. |
-| Data Exposure	| CWE-200 |	Divulgation de secrets en clair dans le système de tickets. | Interdire le stockage de mots de passe en clair ; utiliser des liens à usage unique. |
-| Path Traversal |	CWE-22	| Lecture de fichiers système et compromission de l'hôte. |	Utiliser des IDs de fichiers mappés en base de données ou une liste blanche stricte. |
+| Missing Authorization | CWE-862 |	Contrôle d’autorisation manquant. |	Mettre en place des contrôles d’accès centralisés et le moindre privilège. |
+| Credential Exposure / Sensitive Data Exposure | CWE-256 (+ CWE-200) |	Exposition de mots de passe et secrets sensibles. | Interdire les secrets en clair et utiliser des liens temporaires. |
+| LFI / Path Traversal |	CWE-22 (+ CWE-73)	| Lecture de fichiers système et compromission de l'hôte. |	Restreindre les chemins accessibles et filtrer les entrées utilisateur. |
 
 ---
 

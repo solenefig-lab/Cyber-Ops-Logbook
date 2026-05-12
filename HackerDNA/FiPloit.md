@@ -124,19 +124,14 @@ sudo php -r 'echo file_get_contents("/root/flag-root.txt");'
 
 ## Analyse GRC — Recommandations
 
-| Risque | Impact | Recommandation |
-|--------|--------|----------------|
-| `notes.txt` exposé | Fuite de surface d'attaque | Supprimer les fichiers debug en prod |
-| Upload sans validation stricte | RCE, compromission totale | Liste blanche d'extensions + renommage |
-| sudo PHP sans restriction | Escalade Root | Principe du moindre privilège (PoLP) |
-| Port 8080 public | Exposition service non durci | Firewall : fermer les ports dev |
-
-| Risque              | CWE        |
-|---------------------|------------|
-| File Upload Bypass  | CWE-434    |
-| Information Leakage | CWE-200    |
-| Sudo Misconfiguration | CWE-269  |
-| Dev Port exposé     | CWE-16     |
+| Risque | CWE | Impact | Recommandation |
+|---|---|---|---|
+| Information Leakage (`notes.txt`) | CWE-200 | Exposition de chemins internes et d’informations sensibles. | Supprimer les fichiers debug et limiter leur accès en production. |
+| File Upload Bypass | CWE-434 | Upload de webshell et compromission du serveur. | Utiliser une liste blanche d’extensions et renommer les fichiers uploadés. |
+| Improper Input Validation | CWE-20 | Contournement du filtre via double extension. | Valider l’extension réelle avec `pathinfo()` et le type MIME. |
+| Privilege Escalation | CWE-269 | Escalade de privilèges jusqu’à root. | Appliquer le principe du moindre privilège pour sudo. |
+| Execution with Unnecessary Privileges | CWE-250 | Exécution de PHP avec des privilèges élevés. | Interdire les interpréteurs non restreints dans sudoers. |
+| Exposed Development Service | CWE-1188 | Exposition d’un service de développement vulnérable. | Restreindre l’accès aux ports de dev via firewall ou VPN. |
 
 ---
 
