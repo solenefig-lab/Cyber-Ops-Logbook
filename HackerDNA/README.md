@@ -13,6 +13,8 @@ Ce dossier centralise mes analyses et démarches des défis et labs de la platef
 | Challenge | Difficulté | Domaines d'Audit |
 | :--- | :--- | :--- |
 | [**FiPloit**](./FiPloit.md) | Facile | Arbitrary File Upload, RCE, PrivEsc |
+| [**Clear Desk**](./ClearDesk.md/) | Moyen | IDOR / BOLA, API Security, Path Traversal |
+
 
 ---
 
