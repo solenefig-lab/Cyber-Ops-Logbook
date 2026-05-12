@@ -14,6 +14,7 @@ Ce dossier centralise mes analyses et démarches des défis et labs de la platef
 | :--- | :--- | :--- |
 | [**FiPloit**](./FiPloit.md) | Facile | Arbitrary File Upload, RCE, PrivEsc |
 | [**Clear Desk**](./ClearDesk.md/) | Moyen | IDOR / BOLA, API Security, Path Traversal |
+| [**TechNova Infiltration**](./TechnovaInfiltration.md/) | Moyen | Web Enumeration, SSH, Password Cracking, PrivEsc, Linux Security, CVE Exploitation|
 
 
 ---
