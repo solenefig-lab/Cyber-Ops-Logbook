@@ -81,7 +81,7 @@ whoami
 
 ## Analyse GRC — Recommandations
 
-|| Risque | CWE | Impact | Recommandation |
+| Risque | CWE | Impact | Recommandation |
 |---|---|---|---|
 | Exposure of Private Key | CWE-522 | Accès non autorisé au serveur via SSH. | Ne jamais stocker de clés privées sur un serveur web accessible publiquement. |
 | Exposed Backup Files | CWE-552 | Fuite d’informations sensibles via des fichiers accessibles publiquement. | Restreindre l’accès aux répertoires de backup et supprimer les fichiers inutiles en production. |
