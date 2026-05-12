@@ -12,7 +12,7 @@ Ce dossier centralise mes analyses et démarches des défis et labs de la platef
 
 | Challenge | Difficulté | Domaines d'Audit |
 | :--- | :--- | :--- |
-| [**FiPloit**](./FiPloit/) | Facile | Arbitrary File Upload, RCE, PrivEsc |
+| [**FiPloit**](./FiPloit.md) | Facile | Arbitrary File Upload, RCE, PrivEsc |
 
 ---
 

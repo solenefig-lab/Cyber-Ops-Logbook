@@ -1,7 +1,8 @@
 # Write-Up : FiPloit
 
 **Plateforme :** HackerDNA  (https://hackerdna.com/fr/labs/fiploit)
-**Catégorie :** Web Security — File Operations  
+
+**Catégorie :** Web Security - File Operations  
 **Difficulté :** Facile  
 **Tags :** `LFI` `File Upload Bypass` `PHP Security` `RCE` `PrivEsc`
 
@@ -129,6 +130,13 @@ sudo php -r 'echo file_get_contents("/root/flag-root.txt");'
 | Upload sans validation stricte | RCE, compromission totale | Liste blanche d'extensions + renommage |
 | sudo PHP sans restriction | Escalade Root | Principe du moindre privilège (PoLP) |
 | Port 8080 public | Exposition service non durci | Firewall : fermer les ports dev |
+
+| Risque              | CWE        |
+|---------------------|------------|
+| File Upload Bypass  | CWE-434    |
+| Information Leakage | CWE-200    |
+| Sudo Misconfiguration | CWE-269  |
+| Dev Port exposé     | CWE-16     |
 
 ---
 
