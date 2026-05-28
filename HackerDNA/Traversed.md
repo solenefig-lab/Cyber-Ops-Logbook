@@ -1,4 +1,4 @@
-# WriteUp : TechNova Infiltration
+# WriteUp : Traversed
 
 **Plateforme :** HackerDNA  (https://hackerdna.com/fr/labs/traversed)
 
