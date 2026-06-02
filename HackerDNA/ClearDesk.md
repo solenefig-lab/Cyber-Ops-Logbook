@@ -2,8 +2,8 @@
 
 **Plateforme :** HackerDNA  (https://hackerdna.com/fr/labs/cleardesk)
 
-**Catégorie :** API Security — Access Controls  
-**Difficulté :** Moyen 
+**Catégorie :** API Security — Access Controls    
+**Difficulté :** Moyen   
 **Tags :** `IDOR` `API Security` `Path Traversal` `Access Control` `PrivEsc`
 
 
@@ -15,7 +15,7 @@ L'API du helpdesk de **ClearDesk** authentifie chaque requête, mais manque de c
 
 ---
 
-## ⛓️ Chaîne d'Attaque
+## Chaîne d'Attaque
 `[Enumération API]` ➔ `[IDOR / BOLA]` ➔ `[Credential Theft]` ➔ `[Privilege Escalation]` ➔ `[Path Traversal]` ➔ 🚩
 
 ---

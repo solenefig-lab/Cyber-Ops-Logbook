@@ -11,6 +11,7 @@
 ## Scénario
 
 Le laboratoire simule une compromission de l'application médicale MediTrack Health. La faille réside dans une mauvaise gestion de l'en-tête HTTP Host lors de la génération des liens de réinitialisation de mot de passe, couplée à une troncature stricte des URLs dans les logs. Après une prise de contrôle du compte administrateur, une injection de commandes permet un accès au système, suivi d'une escalade de privilèges via un binaire système autorisé dans la configuration sudo.
+
 ---
 
 ## Chaîne d'Attaque

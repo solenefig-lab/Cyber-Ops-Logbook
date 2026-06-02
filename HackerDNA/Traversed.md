@@ -2,8 +2,8 @@
 
 **Plateforme :** HackerDNA  (https://hackerdna.com/fr/labs/traversed)
 
-**Catégorie :** Git Exposure - Python PrivEsc  
-**Difficulté :** Moyen 
+**Catégorie :** Git Exposure - Python PrivEsc    
+**Difficulté :** Moyen   
 **Tags :** `Git Exposure` `Source Code Disclosure` `Credential Leakage` `SSH` `Python Library Hijacking` `PrivEsc`     
 
 ---
