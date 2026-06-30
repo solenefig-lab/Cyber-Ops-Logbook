@@ -3,15 +3,18 @@
 > **Transformer des patterns techniques en décisions de gouvernance.**  
 > *From technical patterns to governance decisions.*
 
+> > A structured cybersecurity knowledge base translating technical attack patterns into governance and risk insights.
+>> Key module: [Risk Pattern Overview](./docs/risk-patterns.md)
+
 ---
 
 ## Vision
 
-La gouvernance cybersécurité est plus pertinente lorsqu'elle s'appuie sur une compréhension concrète des mécanismes techniques qu'elle cherche à maîtriser.
+Ce projet structure l’analyse de la sécurité à partir de l’observation de mécanismes techniques concrets issus de wargames et de labs.
 
-Ce dépôt documente des investigations réalisées sur des **CTF**, **wargames** et **laboratoires de cybersécurité** afin d'identifier des **patterns techniques réutilisables**, d'analyser leurs implications en matière de sécurité et de les traduire en enseignements utiles pour la gouvernance, la gestion des risques et les contrôles de sécurité.
+L’objectif est de relier ces patterns à leur impact sur les contrôles, la gestion des risques et la gouvernance de la sécurité.
 
-L'objectif n'est **pas** de publier des solutions de challenges, mais de construire une base de connaissances reliant les observations techniques aux décisions de gouvernance.
+Il ne s’agit pas de documenter des exploits, mais de construire une lecture opérationnelle des vulnérabilités permettant d’alimenter des décisions de sécurité plus robustes et mieux alignées avec les environnements réels.
 
 ---
 
@@ -100,7 +103,17 @@ Les analyses couvrent notamment :
 
 ---
 
-## 🎯 Principes
+### Risk Pattern Mapping
+
+Une cartographie des principaux patterns de vulnérabilités techniques observés dans les labs et wargames est disponible ici :
+
+➡️ [Panorama des patterns de risques](./docs/risk-patterns.md)
+
+Ce référentiel synthétise les vulnérabilités récurrentes et leur lecture en termes de contrôle, de gouvernance et de gestion des risques.
+
+---
+
+## Principes
 
 Ce dépôt repose sur quatre principes :
 

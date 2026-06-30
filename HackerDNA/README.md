@@ -75,6 +75,16 @@ Enseignements pour la gouvernance
 
 ---
 
+## Risk Pattern Mapping
+
+Les vulnérabilités identifiées dans les différents challenges sont consolidées dans un référentiel de patterns de risques :
+
+➡️ [Panorama des patterns de risques](../docs/risk-patterns.md)
+
+Ce référentiel permet de relier les scénarios d’attaque à des familles de risques récurrents et à leur lecture en termes de contrôle et de gouvernance.
+
+---
+
 ## Profil HackerDNA
 
 [👤 Retrouvez mon profil public HackerDNA *(classement en temps réel)*](https://hackerdna.com/users/solene)
