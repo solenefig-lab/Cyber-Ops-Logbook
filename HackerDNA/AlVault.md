@@ -28,7 +28,7 @@ Cette habitude, souvent négligée, révèle ici un commentaire laissé par un d
 
 `<!-- Internal dev portal moved to /dev - cleanup old files before pushing to prod -->`
 
-** Réflexe audit :** Les commentaires HTML sont visibles de n'importe quel navigateur. Sur un vrai périmètre, cela figurerait dans le rapport comme "exposition d'informations architecturales en clair".
+**Réflexe audit :** Les commentaires HTML sont visibles de n'importe quel navigateur. Sur un vrai périmètre, cela figurerait dans le rapport comme "exposition d'informations architecturales en clair".
 
 ### Enumération Web
 L'accés à la page `robots.txt` pour empêcher l'indexation de pages nous confirment les autres environnements.

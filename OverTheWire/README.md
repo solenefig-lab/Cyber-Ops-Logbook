@@ -4,22 +4,25 @@
 ![Level](https://img.shields.io/badge/Level-Intermediate-orange)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-> **Apprentissage technique (Linux / sécurité) au service d’une démarche GRC : comprendre, vérifier et traduire les risques techniques en décisions concrètes.**
+> **Des patterns techniques aux décisions de gouvernance : comprendre les mécanismes de sécurité pour renforcer l'analyse des risques, les contrôles et les recommandations de sécurité.**
 
 ---
 
-## Objectif
+## Positionnement
 
-Développer une compréhension opérationnelle des systèmes pour :
-* **Analyser** des situations de sécurité réelles.
-* **Vérifier** l’application effective des contrôles de sécurité.
-* **Renforcer** la pertinence des recommandations en gouvernance (GRC).
+Les wargames **OverTheWire** sont utilisés comme un laboratoire d'observation des mécanismes de sécurité.
+
+Chaque parcours permet d'identifier des **patterns techniques récurrents**, d'analyser leurs implications en matière de sécurité et de les traduire en enseignements utiles pour l'audit, la gouvernance et la maîtrise des risques.
+
+L'objectif n'est pas de documenter les solutions des exercices, mais de construire une base de connaissances réutilisable reliant les observations techniques aux décisions de gouvernance. 
 
 ---
 
 ## Parcours Hands-on
 
-### [OverTheWire — Bandit (Niveau 32 - Terminé)](https://overthewire.org/wargames/bandit/) | [Consulter mes notes](./bandit/)
+Chaque parcours est synthétisé sous forme de patterns techniques, de lectures sécurité et de traductions en enjeux GRC, sans divulguer les solutions des exercices.  
+
+### [OverTheWire — Bandit (Niveau 32 - Terminé)](https://overthewire.org/wargames/bandit/) | [Consulter mes notes](./bandit/README.md)
 *Focus : Fondamentaux Linux, permissions, gestion des accès et exposition des données.*
 
 | Compétence technique | Lecture GRC / Audit |
@@ -42,7 +45,7 @@ find / -perm -4000 -type f 2>/dev/null
 grep -rEi "password|token|secret" /etc/ 2>/dev/null
 ```
 ---
-### [OverTheWire — Krypton (Level 6/7 — En cours)](https://overthewire.org/wargames/krypton/) | [Consulter mes notes](./krypton/)
+### [OverTheWire — Krypton (Level 6/7 — En cours)](https://overthewire.org/wargames/krypton/) | [Consulter mes notes](./krypton/README.md)
 
 *Focus : Cryptographie appliquée — de César au stream cipher, en passant
 par l'analyse de Kasiski et les générateurs pseudo-aléatoires faibles.*
@@ -55,7 +58,7 @@ par l'analyse de Kasiski et les générateurs pseudo-aléatoires faibles.*
 | **Script Python d'analyse cryptographique** | Automatisation des contrôles de sécurité — vérification de la robustesse des choix crypto lors d'un audit. |
 
 ---
-### [OverTheWire — Leviathan (7/7 — Terminé)](https://overthewire.org/wargames/leviathan/) | [Consulter mes notes](./leviathan/)
+### [OverTheWire — Leviathan (7/7 — Terminé)](https://overthewire.org/wargames/leviathan/) | [Consulter mes notes](./leviathan/README.md)
 *Focus : Analyse de binaires, escalade de privilèges SetUID, vulnérabilités TOCTOU.*
 
 | Compétence technique | Lecture GRC / Audit |
@@ -68,7 +71,7 @@ par l'analyse de Kasiski et les générateurs pseudo-aléatoires faibles.*
 | **Binaires SetUID** | Surface d'attaque liée aux droits élevés — audit PoLP et revue des exécutables sensibles. |
 
 ---
-### [OverTheWire — Natas (Level 12/34 — En cours)](https://overthewire.org/wargames/natas/) | [Consulter mes notes](./natas/)
+### [OverTheWire — Natas (Level 12/34 — En cours)](https://overthewire.org/wargames/natas/) | [Consulter mes notes](./natas/README.md)
 
 *Focus : Vulnérabilités web côté serveur — contrôle d'accès, injections,
 cryptographie faible. Mapping OWASP Top 10.*
@@ -84,14 +87,15 @@ cryptographie faible. Mapping OWASP Top 10.*
 ## Organisation du dépôt
 Chaque section documente les concepts techniques, les patterns de résolution rencontrés et leur traduction en enjeux GRC.
 
-[Dossier Bandit](./bandit/): Concepts clés et patterns de résolution (Linux & System Security).
+[Dossier Bandit](./bandit/README.md): Concepts clés et patterns de résolution (Linux & System Security).
 
-[Dossier Krypton](./krypton/): Bases de la cryptographie appliquée à la protection des actifs.
+[Dossier Krypton](./krypton/README.md): Bases de la cryptographie appliquée à la protection des actifs.
 
-[Dossier Leviathan](./leviathan/): Analyse de la logique de privilèges et exploitation de binaires.
+[Dossier Leviathan](./leviathan/README.md): Analyse de la logique de privilèges et exploitation de binaires.
 
-[Dossier Natas](./natas/): Vulnérabilités web et bonnes pratiques (Top 10 OWASP).
+[Dossier Natas](./natas/README.md): Vulnérabilités web et bonnes pratiques (Top 10 OWASP).
 
 
 =======
-_**Note d'éthique** : Aucun secret ou mot de passe n'est publié afin de préserver l'intégrité des plateformes d'apprentissage et de démontrer mes réflexes de protection des données sensibles.
+
+_Note d'éthique : Aucun secret, mot de passe ou solution complète n'est publié afin de préserver l'intégrité des plateformes d'apprentissage et de promouvoir une documentation responsable centrée sur la compréhension des mécanismes de sécurité._
