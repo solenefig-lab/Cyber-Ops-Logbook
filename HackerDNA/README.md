@@ -31,6 +31,7 @@ Les solutions complètes ne sont volontairement pas publiées ; l'accent est mis
 | [**TechNova Infiltration**](./TechnovaInfiltration.md/) | Moyen | Web Enumeration, SSH, Password Cracking, PrivEsc, Linux Security, CVE Exploitation |
 | [**Ping Pwn**](./PingPwn.md/) | Défi | Command Injection, Web Exploitation, Service Discovery, Network Security |
 | [**Traversed**](./Traversed.md/) | Moyen | Git Exposure, Source Code Disclosure, Credential Leakage, SSH, Python Library Hijacking, PrivEsc |
+| [**Test d'injection SQL**](./Test-d-Injection-SQL.md) | Défi | SQL Injection,  Authentication Bypass |
 
 ---
 

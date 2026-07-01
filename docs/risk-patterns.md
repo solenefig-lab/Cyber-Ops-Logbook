@@ -13,7 +13,7 @@ L’objectif est de relier des vulnérabilités techniques à des implications e
 | Risque | CWE | Impact | Recommandation | Source |
 |--------|-----|--------|----------------|--------|
 | Command Injection | CWE-78 | Exécution de code arbitraire sur le système | Éviter les appels système directs, utiliser `subprocess.run()` avec `shell=False` et validation stricte | PingPwn / HostHijack / AIVault |
-| SQL Injection | CWE-89 | Accès non autorisé aux données, contournement d’authentification | Requêtes préparées, validation côté serveur, SAST/DAST | Alpwned |
+| SQL Injection | CWE-89 | Accès non autorisé aux données, contournement d’authentification | Requêtes préparées, validation côté serveur, SAST/DAST | Alpwned, Test d'Injection SQL |
 | BOLA / IDOR | CWE-639 | Fuite de données entre utilisateurs | Vérification des autorisations côté serveur sur chaque objet | ClearDesk |
 | Information Disclosure | CWE-200 | Exposition de données sensibles et chemins internes | Nettoyage des environnements, suppression des fichiers de debug | AIVault / FiPloit |
 | Privilege Escalation | CWE-269 / 250 | Accès root ou élévation de privilèges | Moindre privilège, audit sudo, durcissement des permissions | FiPloit / HostHijack |
