@@ -25,6 +25,7 @@ Les solutions complètes ne sont volontairement pas publiées ; l'accent est mis
 | :--- | :--- | :--- |
 | [**Alpwned**](Alpwned.md) | Moyen | SQL Injection, File Permissions, Privilege Escalation |
 | [**AlVault**](./AlVault.md) | Moyen | Web, Information Leakage, Command Injection |
+| [**Auth Bypass**](./Auth-Bypass.md) | Moyen |SQL Injection, Authentication Bypass   |
 | [**FiPloit**](./FiPloit.md) | Facile | Arbitrary File Upload, RCE, PrivEsc |
 | [**Clear Desk**](./ClearDesk.md/) | Moyen | IDOR / BOLA, API Security, Path Traversal |
 | [**Host Hijack**](./HostHijack.md/) | Moyen | HTTP Headers, Password Reset Poisoning, Command Injection, PrivEsc   |
