@@ -6,6 +6,10 @@ Ce document synthétise des patterns de risques observés à travers des environ
 
 L’objectif est de relier des vulnérabilités techniques à des implications en matière de contrôle, de gouvernance et de gestion des risques.
 
+Ce document constitue le référentiel central du dépôt.
+
+Les observations techniques issues du **[Technical Security Assessment Playbook](technical-security-assessment-playbook.md)** et des études de cas **[HackerDNA](../HackerDNA/README.md)** et **[OverTheWire](../OverTheWire/README.md)** y sont consolidées sous forme de familles de risques, de recommandations de sécurité et de références aux principaux standards (CWE, OWASP Top 10).
+
 ---
 
 ## Index des risques
@@ -130,3 +134,21 @@ Ce document utilise principalement :
 ## Finalité
 
 Ce document structure une lecture des risques techniques sous un angle exploitable en audit, en gouvernance et en conception de contrôles de sécurité.
+
+---
+
+## Aller plus loin
+
+Pour comprendre comment ces risques sont identifiés sur le terrain :
+
+- consulter le **[Technical Security Assessment Playbook](./technical-security-assessment-playbook.md)** ;
+- explorer les études de cas **[HackerDNA](../HackerDNA/README.md)** ;
+- parcourir les analyses **[OverTheWire](../OverTheWire/README.md)**.
+
+---
+
+## License
+
+© Solène Figueiredo
+
+Licensed under CC BY 4.0.

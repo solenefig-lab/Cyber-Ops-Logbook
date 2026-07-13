@@ -18,6 +18,17 @@ L'objectif n'est pas de documenter les solutions des exercices, mais de construi
 
 ---
 
+## Comment utiliser ce dossier
+
+Les wargames OverTheWire permettent d'observer des mécanismes techniques de sécurité de manière progressive.
+
+Les patterns identifiés sont ensuite :
+
+- reliés au **[Technical Security Assessment Playbook](../docs/technical-security-assessment-playbook.md)** pour comprendre leur intérêt en audit ;
+- consolidés dans le **[Panorama des patterns de risques](../docs/risk-patterns.md)** afin de les traduire en enjeux de gouvernance et de gestion des risques.
+
+---
+
 ## Parcours Hands-on
 
 Chaque parcours est synthétisé sous forme de patterns techniques, de lectures sécurité et de traductions en enjeux GRC, sans divulguer les solutions des exercices.  
@@ -99,3 +110,13 @@ Chaque section documente les concepts techniques, les patterns de résolution re
 =======
 
 _Note d'éthique : Aucun secret, mot de passe ou solution complète n'est publié afin de préserver l'intégrité des plateformes d'apprentissage et de promouvoir une documentation responsable centrée sur la compréhension des mécanismes de sécurité._
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

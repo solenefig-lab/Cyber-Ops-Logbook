@@ -144,3 +144,12 @@ sudo php -r 'echo file_get_contents("/root/flag-root.txt");'
 - **Validation d'entrée :** `strpos('.txt')` ≠ validation 
   d'extension. Utiliser une liste blanche stricte ou `pathinfo()`.
 
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

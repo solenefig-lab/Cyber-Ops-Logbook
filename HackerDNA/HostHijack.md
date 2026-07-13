@@ -107,4 +107,14 @@ Analyse GRC — Recommandations
 - **Les en-têtes HTTP ne sont pas fiables :** L'en-tête Host est entièrement contrôlé par l'attaquant et ne doit jamais servir de base pour générer des données de sécurité ou des liens sensibles.
 - **Attention aux limites de stockage :** Tronquer une donnée dans un journal pour des raisons d'affichage peut créer des effets de bord où la réduction de certaines variables permet d'exposer la partie masquée d'une autre.
 - **La neutralisation des entrées est indispensable :** Tout paramètre utilisateur concaténé dans une commande système (comme les outils de diagnostic réseau) doit subir une validation rigoureuse ou être encapsulé.
-- **Sécuriser les droits sudo :** Accorder le privilège d'exécuter certains utilitaires natifs (comme find, less, awk) en tant que root revient à accorder un accès shell complet sur la machine
+- **Sécuriser les droits sudo :** Accorder le privilège d'exécuter certains utilitaires natifs (comme find, less, awk) en tant que root revient à accorder un accès shell complet sur la machine.
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

@@ -97,3 +97,13 @@ Le flag s'affiche alors dans la sortie brute : `Access Granted`
 
 - **Éviter la concaténation de chaînes dans la requête :** L'utilisation d'opérateurs et métacaractères permet de détourner facilement la logique d'exécution des entrées utilisateurs si les arguments ne sont pas isolés de l'exécutable.
 - **Vérifier la sortie d'un formulaire :** Retourner directement la sortie d'une commande SQL dans la réponse HTTP trahit une concaténation non filtrée. C'est à la fois l'indice de la vulnérabilité et le vecteur d'exfiltration.
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

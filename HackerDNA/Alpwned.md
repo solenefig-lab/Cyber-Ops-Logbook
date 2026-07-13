@@ -194,3 +194,13 @@ Le flag s'affiche alors.
 - **Vérifier les droits d'écriture de tous les fichiers de processus  :** La reconnaissance des processus et des fichiers exécutables utilisés ont permis d'accèder à root.  
 - **Ne jamais stocker des identifiants système dans une application web :** Les credentials SSH exposés dans le dashboard illustrent un anti-pattern classique : la frontière entre couche applicative et couche système n'est pas respectée. Un attaquant qui compromet l'application ne devrait jamais pouvoir pivoter directement vers l'infrastructure sous-jacente. 
 - **L'utilisation de scripts de remise à l'état initial est une protection insuffisante :** Une fenêtre de réinitialisation de 5 secondes est largement exploitable. La vraie correction reste de supprimer la permission d'écriture, pas de la corriger en boucle.
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

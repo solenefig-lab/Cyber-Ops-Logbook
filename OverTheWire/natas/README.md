@@ -99,3 +99,13 @@ Exploitation d’une clé XOR statique via une attaque à texte clair connu
 | A01: Broken Access Control  | LFI, cookies, Referer, directory listing  |
 | A02: Cryptographic Failures | XOR réversible, secrets exposés           |
 | A03: Injection              | Command injection, paramètres non filtrés |
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

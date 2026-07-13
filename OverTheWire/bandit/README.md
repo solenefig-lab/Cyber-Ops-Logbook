@@ -334,3 +334,13 @@ _**N.b.:**_
    * Approche méthodologique uniquement.
 
    * Environnement d’apprentissage contrôlé.
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

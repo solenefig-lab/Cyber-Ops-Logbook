@@ -191,3 +191,12 @@ _Note : L'erreur tar sur /tmp/pwn est normale et attendue; les commandes inject�
 - **Valider l'existence d'un dossier n'est pas valider son contenu :** `os.path.isdir()` confirme qu'un chemin existe, pas que la chaîne qui le contient est sûre pour un shell. L'illusion de validation est plus dangereuse que l'absence de validation, car elle donne une fausse confiance.
 - **Lire le code avant d'exploiter :** La lecture de `backup.py` a permis de comprendre précisément le mécanisme de validation et d'identifier le point de rupture (`os.system()`) avant de construire le payload. Une approche boîte blanche, même partielle, accélère et fiabilise l'exploitation.
 
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

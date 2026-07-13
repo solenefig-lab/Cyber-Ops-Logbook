@@ -94,3 +94,13 @@ whoami
 - **La fragilité du périmètre :** Un simple fichier de backup oublié par un développeur a rendu caduque toute la sécurité périmétrale.
 - **L'importance du durcissement (Hardening) :** Au-delà de l'accès SSH, c'est la version obsolète d'un binaire système (Sudo) qui a permis la prise de contrôle totale. La sécurité est une défense en profondeur.
 - **Gestion des secrets :** Une clé SSH ne devrait jamais transiter via un serveur HTTP. L'utilisation de protocoles de transfert sécurisés et la rotation des clés sont essentielles.
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

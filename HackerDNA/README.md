@@ -17,6 +17,7 @@ Chaque investigation vise à comprendre la chaîne d'attaque dans son ensemble, 
 
 Les solutions complètes ne sont volontairement pas publiées ; l'accent est mis sur la méthodologie d'analyse et les enseignements réutilisables.
 
+
 ---
 
 ## Investigations
@@ -77,13 +78,19 @@ Enseignements pour la gouvernance
 
 ---
 
-## Risk Pattern Mapping
+## Ressources associées
 
-Les vulnérabilités identifiées dans les différents challenges sont consolidées dans un référentiel de patterns de risques :
+Les observations réalisées dans les différents challenges s'intègrent dans deux référentiels complémentaires :
 
-➡️ [Panorama des patterns de risques](../docs/risk-patterns.md)
+➡️ **[Technical Security Assessment Playbook](../docs/technical-security-assessment-playbook.md)** 
 
-Ce référentiel permet de relier les scénarios d’attaque à des familles de risques récurrents et à leur lecture en termes de contrôle et de gouvernance.
+Relie les actions techniques d'audit (commandes, outils, payloads) aux indices recherchés, aux risques potentiels et aux pratiques de sécurité associées.
+
+➡️ **[Panorama des patterns de risques](../docs/risk-patterns.md)** 
+
+Consolide les vulnérabilités observées dans les différents labs et les relie aux familles de risques, aux contrôles de sécurité et aux enjeux de gouvernance.
+
+Ensemble, ces documents permettent de replacer chaque étude de cas dans une vision plus globale de l'audit technique et de la gouvernance de la sécurité.
 
 ---
 
@@ -109,3 +116,13 @@ Conformément aux bonnes pratiques de la communauté :
 These write-ups document realistic attack scenarios performed on HackerDNA laboratories.
 
 Rather than publishing walkthroughs, each case study analyses the attack chain, identifies recurring security weaknesses and translates technical findings into governance, risk management and defensive security recommendations.
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.

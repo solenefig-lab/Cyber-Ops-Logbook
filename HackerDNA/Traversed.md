@@ -123,3 +123,13 @@ Analyse GRC — Recommandations
 - **Supprimer un secret ne suffit pas :** l’historique Git conserve les anciennes versions des fichiers tant qu’il n’est pas réécrit.
 - **Le chargement de bibliothèques est une surface d’attaque :** Python privilégie les modules locaux avant les bibliothèques système.
 - **Les environnements de développement exposés sont dangereux :** une simple erreur de configuration peut mener à une compromission complète du serveur.
+
+---
+
+## License
+
+Original analysis © Solène Figueiredo.
+
+Licensed under **CC BY 4.0**.
+
+Challenge names and any third-party intellectual property remain the property of their respective owners.
