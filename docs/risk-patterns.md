@@ -21,13 +21,15 @@ Les observations techniques issues du **[Technical Security Assessment Playbook]
 | Information Disclosure | CWE-200 | Exposition de données sensibles et chemins internes | Nettoyage des environnements, suppression des fichiers de debug | AIVault, FiPloit |
 | Exposition d'Information via Message d'Erreur | CWE-209 | Divulgation d'informations sur le fonctionnement interne de l'application (moteur SQL, structure des requêtes, erreurs) | Retourner des messages d'erreur génériques, journaliser les détails côté serveur, désactiver les erreurs détaillées en production  | Auth Bypass |
 | Privilege Escalation | CWE-269 / 250 | Accès root ou élévation de privilèges | Moindre privilège, audit sudo, durcissement des permissions | FiPloit, HostHijack |
-| Transmission d'informations sensibles en clair sur le réseau | CWE-319 | Expose identifiants et cookies de session à l'interception et attaques de type *Man-in-the-Middle* | Forcer HTTPS (TLS), redirection HTTP→HTTPS, activer HSTS, utiliser des cookies `Secure` et `HttpOnly` | Auth bypass |
+| Exposed Administrative Interface | CWE-284 | Accès à des fonctions d'administration critiques depuis un réseau non maîtrisé | Restreindre l'accès (VPN, ACL, filtrage IP), supprimer les interfaces inutiles, journaliser les accès | Compromised-1 |
+| Transmission d'informations sensibles en clair sur le réseau | CWE-319 | Expose identifiants et cookies de session à l'interception et attaques de type *Man-in-the-Middle*; Compromission des identifiants et prise de contrôle de l'interface d'administration | Forcer HTTPS (TLS), redirection HTTP→HTTPS, activer HSTS, utiliser des cookies `Secure` et `HttpOnly` | Auth bypass, Compromised-1 |
 | Python Library Hijacking | CWE-427 | Exécution de code arbitraire via dépendances | Sécuriser PYTHONPATH et chemins d’exécution | Traversed |
 | File Upload Bypass | CWE-434 | Upload de webshell et compromission serveur | Validation stricte des extensions, renommage des fichiers | FiPloit |
 | Insufficiently Protected Credentials | CWE-522 | Compromission d’accès SSH / fuite de clés | Interdire stockage de clés privées sur serveurs exposés | TechnovaInfiltration |
 | Git Repository Exposure | CWE-552 | Fuite du code source et secrets | Bloquer l’accès au répertoire `.git` côté serveur | Traversed |
 | BOLA / IDOR | CWE-639 | Fuite de données entre utilisateurs | Vérification des autorisations côté serveur sur chaque objet | ClearDesk |
 | Password Reset Poisoning | CWE-640 | Prise de contrôle de compte | Utilisation d’un host statique et sécurisé | HostHijack |
+| Use of Default Credentials | CWE-1392 | Compromission d'un compte privilégié et accès à des fonctions d'administration | Changer systématiquement les identifiants par défaut avant la mise en production, intégrer ce contrôle dans les checklists de déploiement et réaliser des revues périodiques | Compromised-1 |
 
 
 ---
@@ -41,13 +43,16 @@ Les observations techniques issues du **[Technical Security Assessment Playbook]
 | Information Disclosure   | CWE-200 | A05 – Security Misconfiguration | Durcissement des environnements   | Revue de configuration   |
 | Error Message Disclosure  | CWE-209 | A05 – Security Misconfiguration | Gestion sécurisée des erreurs     | Tests applicatifs    |
 | Privilege Escalation | CWE-269 / 250 | A01 – Broken Access Control | Principe du moindre privilège, revue des permissions, durcissement des comptes et des privilèges | Audit des permissions, revue de configuration, tests de privilèges |
-| Transmission d'informations en clair | CWE-319 | A02 – Cryptographic Failures     | HTTPS/TLS, HSTS    | Scan TLS, revue de configuration   |
+| Exposed Administrative Interface | CWE-284 | A01 – Broken Access Control | Restriction réseau des consoles d'administration, segmentation | Revue de configuration, scan des interfaces exposées |
+| Transmission d'informations en clair | CWE-319 | A02 – Cryptographic Failures     | HTTPS/TLS, HSTS    | Scan TLS, revue de configuration; Détection des accès non-chiffrés   |
 | Python Library Hijacking | CWE-427 | A08 – Software and Data Integrity Failures | Sécurisation du PYTHONPATH, gestion des dépendances, chemins d'import maîtrisés | Revue de configuration, SAST, analyse des dépendances |
 | File Upload Bypass   | CWE-434 | A04 – Insecure Design | Validation stricte du type et contenu des fichiers, stockage hors répertoire exécutable, renommage des fichiers   | Tests applicatifs, revue de code, tests d'upload |
 | Insufficiently Protected Credentials | CWE-522 | A02 – Cryptographic Failures | Protection des secrets, stockage sécurisé des identifiants et clés, chiffrement lorsque nécessaire | Secret scanning, revue de configuration, audit des dépôts |
 | Git Repository Exposure   | CWE-552 | A05 – Security Misconfiguration| Restriction d'accès aux répertoires sensibles | Scan de configuration  |
 | BOLA / IDOR     | CWE-639 | A01 – Broken Access Control| Contrôle d'accès par objet   | Tests fonctionnels, tests d'autorisation |
 | Password Reset Poisoning | CWE-640 | A07 – Identification and Authentication Failures | Génération sécurisée des liens de réinitialisation, validation stricte du domaine (Host), jetons à durée de vie limitée | Revue de code, tests fonctionnels du workflow de réinitialisation |
+| Use of Default Credentials | CWE-1392 | A07 – Identification and Authentication Failures | Rotation des identifiants par défaut, gestion des comptes d'administration | Audit de configuration, revues de comptes, scans de conformité |
+
 
 _Note : Les correspondances CWE ↔ OWASP Top 10 sont indicatives; une même faiblesse peut relever de plusieurs catégories selon son contexte d'exploitation._
 

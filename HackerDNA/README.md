@@ -29,6 +29,7 @@ Les solutions complètes ne sont volontairement pas publiées ; l'accent est mis
 | [**Auth Bypass**](./Auth-Bypass.md) | Moyen |SQL Injection, Authentication Bypass   |
 | [**FiPloit**](./FiPloit.md) | Facile | Arbitrary File Upload, RCE, PrivEsc |
 | [**Clear Desk**](./ClearDesk.md/) | Moyen | IDOR / BOLA, API Security, Path Traversal |
+| [**Compromised 1**](./Compromised-1.md/) | Moyen | Default Credentials, WAR Deployment, Privilege Escalation |
 | [**Host Hijack**](./HostHijack.md/) | Moyen | HTTP Headers, Password Reset Poisoning, Command Injection, PrivEsc   |
 | [**TechNova Infiltration**](./TechnovaInfiltration.md/) | Moyen | Web Enumeration, SSH, Password Cracking, PrivEsc, Linux Security, CVE Exploitation |
 | [**Ping Pwn**](./PingPwn.md/) | Défi | Command Injection, Web Exploitation, Service Discovery, Network Security |
