@@ -258,8 +258,18 @@ The repository currently includes:
 
 ## 🤝 Contributions
 
-Suggestions, corrections and discussions are welcome through Issues and Pull Requests.
-Focus on reusable patterns (technique → impact → controls → governance).
+Cyber-Ops-Logbook is open to corrections, technical improvements and better risk mappings.
+
+You can contribute by:
+
+- correcting a technical analysis;  
+- improving a CWE / OWASP mapping;  
+- strengthening a risk or impact assessment;  
+- proposing a better security control;  
+- adding a reliable reference;  
+- improving documentation.  
+
+→ [Contributing guidelines](./CONTRIBUTING.md)
 
 ---
 
