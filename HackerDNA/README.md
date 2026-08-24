@@ -31,8 +31,9 @@ Les solutions complètes ne sont volontairement pas publiées ; l'accent est mis
 | [**Clear Desk**](./ClearDesk.md/) | Moyen | IDOR / BOLA, API Security, Path Traversal |
 | [**Compromised 1**](./Compromised-1.md/) | Moyen | Default Credentials, WAR Deployment, Privilege Escalation |
 | [**Host Hijack**](./HostHijack.md/) | Moyen | HTTP Headers, Password Reset Poisoning, Command Injection, PrivEsc   |
-| [**TechNova Infiltration**](./TechnovaInfiltration.md/) | Moyen | Web Enumeration, SSH, Password Cracking, PrivEsc, Linux Security, CVE Exploitation |
 | [**Ping Pwn**](./PingPwn.md/) | Défi | Command Injection, Web Exploitation, Service Discovery, Network Security |
+| [**Query Quake**](./Query-Quake.md) | Moyen | SQL Injection, WebShell, Privilege Escalation |
+| [**TechNova Infiltration**](./TechnovaInfiltration.md/) | Moyen | Web Enumeration, SSH, Password Cracking, PrivEsc, Linux Security, CVE Exploitation |
 | [**Traversed**](./Traversed.md/) | Moyen | Git Exposure, Source Code Disclosure, Credential Leakage, SSH, Python Library Hijacking, PrivEsc |
 | [**Test d'injection SQL**](./Test-d-Injection-SQL.md) | Défi | SQL Injection,  Authentication Bypass |
 

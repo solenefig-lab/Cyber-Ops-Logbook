@@ -17,10 +17,11 @@ Les observations techniques issues du **[Technical Security Assessment Playbook]
 | Risque | CWE | Impact | Recommandation | Source |
 |--------|-----|--------|----------------|--------|
 | Command Injection | CWE-78 | Exécution de code arbitraire sur le système | Éviter les appels système directs, utiliser `subprocess.run()` avec `shell=False` et validation stricte | AIVault, HostHijack , PingPwn |
-| SQL Injection | CWE-89 | Accès non autorisé aux données, contournement d’authentification | Requêtes préparées, validation côté serveur, SAST/DAST | Alpwned, Auth Bypass, Test d'Injection SQL |
+| SQL Injection | CWE-89 | Accès non autorisé aux données, contournement d’authentification | Requêtes préparées, validation côté serveur, SAST/DAST | Alpwned, Auth Bypass, Query Quake, Test d'Injection SQL |
 | Information Disclosure | CWE-200 | Exposition de données sensibles et chemins internes | Nettoyage des environnements, suppression des fichiers de debug | AIVault, FiPloit |
 | Exposition d'Information via Message d'Erreur | CWE-209 | Divulgation d'informations sur le fonctionnement interne de l'application (moteur SQL, structure des requêtes, erreurs) | Retourner des messages d'erreur génériques, journaliser les détails côté serveur, désactiver les erreurs détaillées en production  | Auth Bypass |
 | Privilege Escalation | CWE-269 / 250 | Accès root ou élévation de privilèges | Moindre privilège, audit sudo, durcissement des permissions | FiPloit, HostHijack |
+| FILE privilege MySQL	| CWE-272	| Extension de l'impact de la SQLi par possibilité d'écriture dans le système de fichiers	| Révoquer FILE lorsqu'il n'est pas nécessaire et appliquer le principe du moindre privilège | Query Quake |
 | Exposed Administrative Interface | CWE-284 | Accès à des fonctions d'administration critiques depuis un réseau non maîtrisé | Restreindre l'accès (VPN, ACL, filtrage IP), supprimer les interfaces inutiles, journaliser les accès | Compromised-1 |
 | Transmission d'informations sensibles en clair sur le réseau | CWE-319 | Expose identifiants et cookies de session à l'interception et attaques de type *Man-in-the-Middle*; Compromission des identifiants et prise de contrôle de l'interface d'administration | Forcer HTTPS (TLS), redirection HTTP→HTTPS, activer HSTS, utiliser des cookies `Secure` et `HttpOnly` | Auth bypass, Compromised-1 |
 | Python Library Hijacking | CWE-427 | Exécution de code arbitraire via dépendances | Sécuriser PYTHONPATH et chemins d’exécution | Traversed |
@@ -29,6 +30,8 @@ Les observations techniques issues du **[Technical Security Assessment Playbook]
 | Git Repository Exposure | CWE-552 | Fuite du code source et secrets | Bloquer l’accès au répertoire `.git` côté serveur | Traversed |
 | BOLA / IDOR | CWE-639 | Fuite de données entre utilisateurs | Vérification des autorisations côté serveur sur chaque objet | ClearDesk |
 | Password Reset Poisoning | CWE-640 | Prise de contrôle de compte | Utilisation d’un host statique et sécurisé | HostHijack |
+| Ressource critique world-writable	| CWE-732	| Modification d'une ressource exécutée avec privilèges | Permissions minimales, propriétaire privilégié, intégrité des tâches | Query Quake |
+| Use of Hard-coded Credentials | CWE-798 | Exposition de credentials réutilisables en cas d'accès au code source |  Utiliser une gestion sécurisée des secrets, hors du code applicatif, avec permissions minimales et rotation | Query Quake |
 | Use of Default Credentials | CWE-1392 | Compromission d'un compte privilégié et accès à des fonctions d'administration | Changer systématiquement les identifiants par défaut avant la mise en production, intégrer ce contrôle dans les checklists de déploiement et réaliser des revues périodiques | Compromised-1 |
 
 
@@ -43,6 +46,7 @@ Les observations techniques issues du **[Technical Security Assessment Playbook]
 | Information Disclosure   | CWE-200 | A05 – Security Misconfiguration | Durcissement des environnements   | Revue de configuration   |
 | Error Message Disclosure  | CWE-209 | A05 – Security Misconfiguration | Gestion sécurisée des erreurs     | Tests applicatifs    |
 | Privilege Escalation | CWE-269 / 250 | A01 – Broken Access Control | Principe du moindre privilège, revue des permissions, durcissement des comptes et des privilèges | Audit des permissions, revue de configuration, tests de privilèges |
+| MySQL FILE privilege excessif |	CWE-272 (Application of Incorrect Principle) / CWE-250 (Execution with Unnecessary Privileges) |	A05 – Security Misconfiguration |	Révoquer FILE ; appliquer le moindre privilège au compte SQL applicatif	| Revue des privilèges SQL, tests de write (SELECT … INTO OUTFILE), audit de configuration DB |
 | Exposed Administrative Interface | CWE-284 | A01 – Broken Access Control | Restriction réseau des consoles d'administration, segmentation | Revue de configuration, scan des interfaces exposées |
 | Transmission d'informations en clair | CWE-319 | A02 – Cryptographic Failures     | HTTPS/TLS, HSTS    | Scan TLS, revue de configuration; Détection des accès non-chiffrés   |
 | Python Library Hijacking | CWE-427 | A08 – Software and Data Integrity Failures | Sécurisation du PYTHONPATH, gestion des dépendances, chemins d'import maîtrisés | Revue de configuration, SAST, analyse des dépendances |
@@ -51,6 +55,8 @@ Les observations techniques issues du **[Technical Security Assessment Playbook]
 | Git Repository Exposure   | CWE-552 | A05 – Security Misconfiguration| Restriction d'accès aux répertoires sensibles | Scan de configuration  |
 | BOLA / IDOR     | CWE-639 | A01 – Broken Access Control| Contrôle d'accès par objet   | Tests fonctionnels, tests d'autorisation |
 | Password Reset Poisoning | CWE-640 | A07 – Identification and Authentication Failures | Génération sécurisée des liens de réinitialisation, validation stricte du domaine (Host), jetons à durée de vie limitée | Revue de code, tests fonctionnels du workflow de réinitialisation |
+| Hard-coded Credentials (code source)	| CWE-798	| A02 – Cryptographic Failures	| Gestion externalisée des secrets (vault, env protégées) ; aucun secret en dur dans le code	| Secret scanning, revue de code, audit des dépôts |
+| Ressource critique world-writable (ex: cron/script root)	| CWE-732	| A05 – Security Misconfiguration	| Permissions restrictives (chmod 700/600) ; propriétaire root uniquement ; contrôle d’intégrité	| Audit de permissions, recherche de fichiers exécutables modifiables, revue des tâches automatisées |
 | Use of Default Credentials | CWE-1392 | A07 – Identification and Authentication Failures | Rotation des identifiants par défaut, gestion des comptes d'administration | Audit de configuration, revues de comptes, scans de conformité |
 
 

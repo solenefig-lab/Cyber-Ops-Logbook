@@ -1,6 +1,6 @@
 # WriteUp : Compromised 1
 
-**Plateforme :** HackerDNA  (https://hackerdna.com/fr/labs//compromised-1)
+**Plateforme :** HackerDNA  (https://hackerdna.com/fr/labs/compromised-1)
 
 **Catégorie :**  Default Credentials - WAR Deployment - Privilege Escalation  
 **Difficulté :** Moyen   
