@@ -92,6 +92,10 @@ Relie les actions techniques d'audit (commandes, outils, payloads) aux indices r
 
 Consolide les vulnérabilités observées dans les différents labs et les relie aux familles de risques, aux contrôles de sécurité et aux enjeux de gouvernance.
 
+➡️ **[Vulnerability Triage Playbook](../docs/vulnerability_triage_playbook.md)**
+
+Quantifier et prioriser les vulnérabilités identifiées via une méthode de scoring CVSS structurée.
+
 Ensemble, ces documents permettent de replacer chaque étude de cas dans une vision plus globale de l'audit technique et de la gouvernance de la sécurité.
 
 ---

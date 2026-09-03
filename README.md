@@ -106,6 +106,10 @@ Le dépôt est organisé autour de quatre niveaux complémentaires :
 4. **[Patterns techniques OverTheWire](./OverTheWire/README.md)**  
    Approfondir des mécanismes de sécurité fondamentaux à travers des wargames.
 
+5. **[Vulnerability Triage Playbook](./docs/vulnerability_triage_playbook.md)**  
+   Quantifier les vulnérabilités observées via CVSS et structurer les décisions de priorisation et de remédiation.
+
+
 
 ---
 ## Démarche

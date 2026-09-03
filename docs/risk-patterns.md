@@ -152,7 +152,8 @@ Ce document structure une lecture des risques techniques sous un angle exploitab
 
 Pour comprendre comment ces risques sont identifiés sur le terrain :
 
-- consulter le **[Technical Security Assessment Playbook](./technical-security-assessment-playbook.md)** ;
+- consulter le **[Technical Security Assessment Playbook](./technical-security-assessment-playbook.md)** pour comprendre comment les actions techniques d'audit permettent d'identifier des indices, des risques et des pratiques de sécurité associées ;
+- consulter le **[Vulnerability Triage Playbook](./vulnerability-triage-playbook.md)** pour quantifier les vulnérabilités identifiées via CVSS et prioriser les décisions de remédiation ;
 - explorer les études de cas **[HackerDNA](../HackerDNA/README.md)** ;
 - parcourir les analyses **[OverTheWire](../OverTheWire/README.md)**.
 

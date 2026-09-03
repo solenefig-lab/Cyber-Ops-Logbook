@@ -25,7 +25,8 @@ Les wargames OverTheWire permettent d'observer des mécanismes techniques de sé
 Les patterns identifiés sont ensuite :
 
 - reliés au **[Technical Security Assessment Playbook](../docs/technical-security-assessment-playbook.md)** pour comprendre leur intérêt en audit ;
-- consolidés dans le **[Panorama des patterns de risques](../docs/risk-patterns.md)** afin de les traduire en enjeux de gouvernance et de gestion des risques.
+- consolidés dans le **[Panorama des patterns de risques](../docs/risk-patterns.md)** afin de les traduire en enjeux de gouvernance et de gestion des risques ;  
+- traduits en scores de criticité et décisions de remédiation via le **[Vulnerability Triage Playbook](../docs/vulnerability_triage_playbook.md)**.
 
 ---
 

@@ -1,9 +1,9 @@
 # Technical Security Assessment Playbook
 
 Ce playbook met en relation les principales actions réalisées lors d'un audit technique (commandes, outils, payloads) avec les observations attendues, les risques révélés et les contrôles de sécurité qui devraient les prévenir ou les détecter.
-Il complète les études de cas (HackerDNA, OverTheWire) en fournissant une lecture transversale des pratiques d’audit.
-Chaque combinaison « Indice recherché → Risque potentiel → Contrôle GRC » de ce playbook se rattache aux patterns décrits dans le [Panorama des patterns de risques](./risk-patterns.md), permettant de relier les observations d’audit de terrain aux référentiels CWE / OWASP et aux décisions de gouvernance.
-
+- Il complète les études de cas (HackerDNA, OverTheWire) en fournissant une lecture transversale des pratiques d’audit.  
+- Chaque combinaison « Indice recherché → Risque potentiel → Contrôle GRC » de ce playbook se rattache aux patterns décrits dans le [Panorama des patterns de risques](./risk-patterns.md), permettant de relier les observations d’audit de terrain aux référentiels CWE / OWASP et aux décisions de gouvernance.  
+- Les vulnérabilités identifiées peuvent être quantifiées et priorisées via le [Vulnerability Triage Playbook](./vulnerability_triage_playbook.md), qui structure le scoring CVSS et les décisions de remédiation.  
 
 ## Des actions techniques aux décisions GRC
 
