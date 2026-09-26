@@ -34,6 +34,7 @@ Les solutions complètes ne sont volontairement pas publiées ; l'accent est mis
 | [**Host Hijack**](./HostHijack.md/) | Moyen | HTTP Headers, Password Reset Poisoning, Command Injection, PrivEsc   |
 | [**Ping Pwn**](./PingPwn.md/) | Défi | Command Injection, Web Exploitation, Service Discovery, Network Security |
 | [**Query Quake**](./Query-Quake.md) | Moyen | SQL Injection, WebShell, Privilege Escalation |
+| [**SSRF Attack**](./SSRF_Attack.md) | Moyen | SSRF, IAM Crediential Theft, Metadata Service Abuse |
 | [**TechNova Infiltration**](./TechnovaInfiltration.md/) | Moyen | Web Enumeration, SSH, Password Cracking, PrivEsc, Linux Security, CVE Exploitation |
 | [**Traversed**](./Traversed.md/) | Moyen | Git Exposure, Source Code Disclosure, Credential Leakage, SSH, Python Library Hijacking, PrivEsc |
 | [**Test d'injection SQL**](./Test-d-Injection-SQL.md) | Défi | SQL Injection,  Authentication Bypass |

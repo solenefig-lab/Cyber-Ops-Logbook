@@ -165,7 +165,7 @@ A03:2021 – Injection                  → SQLi sur username, entrée utilisate
 A05:2021 – Security Misconfiguration  → erreurs SQL détaillées exposées au client
 A05:2021 – Security Misconfiguration  → privilèges excessifs du compte MySQL / FILE
 A05:2021 – Security Misconfiguration  → fichier exécuté avec privilèges root modifiable par des utilisateurs non privilégiés
-````
+```
 
 ---
 
